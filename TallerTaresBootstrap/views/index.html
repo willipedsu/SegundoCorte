@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+	<style type="text/css">
+		div.imgTitle{text-align: center; border: 1px solid black; margin: 0px; background-image:url("ingenieria.png"); background-color: blue; height:100px;}
+		div.Title{text-align: center; margin-bottom: 30px; border-bottom: 2px solid gray; font-size:25px; font-family: "Times New Roman", Times, serif; font-weight:bold;}
+		
+	</style>
+
+	<script src="../js/jquery-1.11.0.min.js"></script> 
+	
+  </head>
+  <body>
+  
+	<br>
+	
+	<div class="container">
+	
+	<div class="row">
+		<div class="col-md-4">
+		
+		<div class="jumbotron">	
+			<h1>Categorias</h1>
+			<form class="navbar-form navbar-left" role="search">	
+				<div class="form-group"> 
+					<input type="text" class="form-control" placeholder="Nombre de Categoria" id="nomCat">
+				</div>
+				<!--<br> -->
+				<!--<br> -->
+				<!--<button type="button" class="btn btn-default btn-lg"> -->
+				<!--	<span class="glyphicon glyphicon-folder-open"></span> Crear -->
+				<!--</button> -->
+				<!-- <button class="btn btn-lg btn-primary btn-block" type="submit" id="boton1">
+				<!--	<span class="glyphicon glyphicon-briefcase"></span> Crear
+				<!-- </button> -->
+				<button type="button" class="btn btn-primary btn-lg" id="boton1">
+					<span class="glyphicon glyphicon-briefcase"></span> Crear
+				</button>
+			</form>
+		</div>
+		<div class="jumbotron">
+			<h2 class="form-signin-heading">Listado</h2>
+			
+			<div id="lisCat">
+			<!--
+				<div class="input-group">
+					<span class="input-group-addon">
+						<input type="checkbox">
+					</span>
+					<input type="text" class="form-control" disabled>
+				</div>
+			-->	
+			</div>
+			
+			<button type="button" class="btn btn-danger" id="botonE1">
+				<span class="glyphicon glyphicon-trash"></span> Eliminar
+			</button>
+			<button type="button" class="btn btn-info" id="botonM1">
+				<span class="glyphicon glyphicon-link"></span> Modificar
+			</button>
+			
+			<input type="text" class="form-control" id="cambiaCate">
+			<button type="button" class="btn btn-default" id="botonA1">
+				<span class="glyphicon glyphicon-link"></span> Aplicar
+			</button>		
+			<button type="button" class="btn btn-default" id="botonC1">
+				<span class="glyphicon glyphicon-hand-down"></span> Cancelar
+			</button>
+		
+		</div>		
+		</div>
+		
+		<div class="col-md-4">
+		
+		<div class="bs-example bs-example-tabs">
+			<ul class="nav nav-tabs" id="group">
+				<!--
+			  	<li><a href="#hola">Hola</a></li>
+				<li><a href="#mundo">Mundo</a></li>
+				-->
+			</ul>
+			<div id="myTabContent" class="tab-content">
+				<!--
+				<div class="tab-pane fade" id="hola">
+					<p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. </p>
+				</div>
+				<div class="tab-pane fade" id="mundo">
+					<p>si funciona jajjajjaj. </p>
+				</div>
+				-->
+			</div>
+		</div>
+		
+		</div>
+		
+		<div class="col-md-4">
+		
+		<div class="jumbotron">	
+			<h1>Tareas</h1>
+			<form class="navbar-form navbar-left" role="search">	
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="Nombre de Tarea" id="nomTar">
+					<div class="btn-group">
+					  <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" id='lisCat2OK'>
+						Categoria <span class="caret"></span>
+					  </button>
+					  <ul class="dropdown-menu" role="menu" id="lisCat2">
+						<li><a href="#">Categoria</a></li>
+						<li role="presentation" class="divider"></li>
+					    <!--
+						<li><a href="#">Casa</a></li>
+						<li><a href="#">Casa</a></li>
+						<li><a href="#">Universidad</a></li>
+						<li><a href="#">Trabajo</a></li>
+						-->
+					  </ul>
+					</div>
+					<div class="btn-group">
+					  <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" id="estadoOK">
+						Estado <span class="caret"></span>
+					  </button>
+					  <ul class="dropdown-menu" role="menu" id="estado">
+						<li><a href="#">Estado</a></li>
+						<li role="presentation" class="divider"></li>
+						<li><a href="#">Sin Iniciar</a></li>
+						<li><a href="#">En Progreso</a></li>
+						<li><a href="#">Terminado</a></li>
+					  </ul>
+					</div>					
+				</div>
+				
+				<!--<br> -->
+				<!--<br> -->
+				<!--<button type="button" class="btn btn-default btn-lg"> -->
+				<!--	<span class="glyphicon glyphicon-folder-open"></span> Crear -->
+				<!--</button> -->
+				<button type="button" class="btn btn-info btn-lg" id="boton2">
+					<span class="glyphicon glyphicon-paperclip"></span> Crear
+				</button>
+			</form>
+		</div>
+		<div class="jumbotron">
+			<h2 class="form-signin-heading">Listado</h2>
+			<!-- <h1>Listado</h1> -->
+			
+			<div id="lisTar">
+			<!--
+			<div class="input-group">
+				<span class="input-group-addon">
+					<input type="checkbox">
+				</span>
+				<input type="text" class="form-control" disabled>
+			</div>
+			-->
+			</div>
+			
+			<button type="button" class="btn btn-danger" id="botonE2">
+				<span class="glyphicon glyphicon-remove-sign"></span> Eliminar
+			</button>
+		
+		</div>		
+		</div>		
+		
+	</div>
+  
+	</div>
+	
+	<script> 
+	
+	var consec = 0;
+	var consecT = 100;
+	
+	$('#cambiaCate').hide();
+	$('#botonA1').hide();
+	$('#botonC1').hide();
+	
+	$('#boton1').on('click', function(){
+		var categ = $('#nomCat').val();
+		
+		if( categ == null || categ.length == 0 ) {
+			alert('El nombre de la categoria es requerido');
+			return false;
+		}
+		
+		
+		//$('#lisCat input').each(function(){
+		//	var nCat = $(this).val();
+		//	alert(nCat);
+		//	if(nCat == categ){
+		//		alert('Ya existe una categoria de nombre: '+categ);
+		//		return false;
+		//	}
+		//});
+		
+		consec = consec+1;
+		
+		<!-- alert(categ) -->
+		$('#lisCat2').append( '<li id="'+consec+'"><a href="#">'+consec+'-'+categ+'</a></li>' );
+		$('#lisCat').append( '<div class="input-group"> <span class="input-group-addon"> <input type="checkbox" id="'+consec+'"> </span> <input type="text" value="'+consec+'-'+categ+'" class="form-control" disabled> </div>' );		
+		$('#group').append( '<li id="'+consec+'"><a href="#d'+consec+'">'+consec+'-'+categ+'</a></li>' );
+		$('#myTabContent').append( '<div class="tab-pane fade" id="d'+consec+'"> </div>' );
+		
+		$('#nomCat').val("");
+		
+	});
+	
+	$('#boton2').on('click', function(){
+		var tarea = $('#nomTar').val();
+		var esta =  $('#estadoOK').text();
+		var cate =  $('#lisCat2OK').text();
+		
+		if( tarea == null || tarea.length == 0 ) {
+			alert('El nombre de la tarea es requerido');
+			return false;
+		}
+		
+		if( esta == null || esta.length == 0 || ($.trim(esta) == 'Estado')) {
+			alert('El estado es requerido');
+			return false;
+		}
+		
+		if( cate == null || cate.length == 0 || ($.trim(cate) == 'Categoria'))	 {
+			alert('La Categoria es requerida');
+			return false;
+		}
+		
+		consecT = consecT+1;
+		
+		//alert(consecT+'-'+cate+'-'+tarea+'-'+esta);
+		
+		var indiceUltimoEspacio= cate.lastIndexOf('-');
+		var consec2 = cate.substring(0,indiceUltimoEspacio);
+		
+		//alert(consec2)
+		
+		$('#lisTar').append( '<div class="input-group"> <span class="input-group-addon"> <input type="checkbox" id="'+consecT+'"> </span> <input type="text" value="'+consecT+' | '+cate+' | '+tarea+' | '+esta+'" class="form-control" disabled> </div>' );		
+		$('#myTabContent #d'+consec2).append( ' <p id="'+consecT+'">'+consecT+' | '+tarea+' | '+esta+' </p> ' );
+		
+		$('#nomTar').val("");
+		$('#estadoOK').text("Estado");
+		$('#estadoOK').append(' <span class="caret"></span>');
+		$('#lisCat2OK').text("Categoria");
+		$('#lisCat2OK').append(' <span class="caret"></span>');
+		
+	});
+	
+	$('#botonE1').on('click', function(){
+	
+		$('#lisCat input:checked').each(function() {
+			//$(this) es el checkbox correspondiente
+			var ide = $(this).attr("id");
+			$('#lisCat2 #'+ide).remove();
+			$('#group #'+ide).remove();
+			$(this).parent().parent().remove();
+		});
+		<!-- var marcado = $("#lisCat input").prop("checked") ? true : false; -->
+		
+	});
+	
+	$('#botonE2').on('click', function(){
+	
+		$('#lisTar input:checked').each(function() {
+			//$(this) es el checkbox correspondiente
+			var ide = $(this).attr("id");
+			$('#myTabContent #'+ide).remove();
+			$(this).parent().parent().remove();
+		});
+		<!-- var marcado = $("#lisCat input").prop("checked") ? true : false; -->
+		
+	});
+	
+	$('#botonM1').on('click', function(){
+		
+		var cont = 0;
+		var ide2 = 0;
+		var valTemp = '';
+		
+		$('#lisCat input:checked').each(function() {
+			//$(this) es el checkbox correspondiente
+			cont = cont+1;
+			ide2 = $(this).attr("id");
+			valTemp = $(this).parent().next().val();
+			valTemp = valTemp.substring(2,valTemp.length);
+			
+		});
+		
+		//alert(valTemp);
+		
+		if (cont > 1) {
+			alert('Debe seleccionar solo uno');
+			return false;
+		}
+		
+		if (cont == 0) {
+			alert('No marco ningun checkbox!');
+			return false;
+		}		
+		
+		$('#cambiaCate').val(valTemp);
+		
+		$('#cambiaCate').show();
+		$('#botonA1').show();
+		$('#botonC1').show();
+		
+		<!-- var marcado = $("#lisCat input").prop("checked") ? true : false; -->
+		
+	});
+	
+	$('#botonA1').on('click', function(){
+		
+		var ide3 = 0;
+		var valTemp2 = '';
+		
+		valTemp2 = $('#cambiaCate').val();
+		
+		$('#lisCat input:checked').each(function() {
+			//$(this) es el checkbox correspondiente
+			ide3 = $(this).attr("id");
+			//valTemp = $(this).parent().next().val();
+			//valTemp = valTemp.substring(2,valTemp.length);
+			
+		});
+		
+		if( valTemp2 == null || valTemp2.length == 0 ) {
+			alert('El nombre de la actualizacion de la Categoria es requerido');
+			return false;
+		}
+		
+		//alert(ide3+'-'+valTemp2);
+		
+		$('#lisCat #'+ide3).parent().next().val(ide3+'-'+valTemp2);
+		$('#group #'+ide3+' a').text(ide3+'-'+valTemp2);
+		$('#lisCat2 #'+ide3+' a').text(ide3+'-'+valTemp2);
+		
+		$('#cambiaCate').hide();
+		$('#botonA1').hide();
+		$('#botonC1').hide();
+		
+		//$('#2 a').text(ide3+'-'+valTemp);
+		
+		<!-- var marcado = $("#lisCat input").prop("checked") ? true : false; -->
+		
+	});
+	
+	$('#botonC1').on('click', function(){
+		$('#cambiaCate').hide();
+		$('#botonA1').hide();
+		$('#botonC1').hide();
+	});
+	
+	//$('#group a').click(function (e) {
+	//	e.preventDefault()
+	//	$(this).tab('show')
+	//});
+	
+	$('#group').on('click', 'a' ,function (e) {
+		e.preventDefault()
+		$(this).tab('show')
+	});
+	
+	$('#lisCat2').on('click', 'li a' , function(){
+		//alert("hola");
+		var categor = $(this).text();
+		//alert(categor);
+		$('#lisCat2OK').text(categor);
+		$('#lisCat2OK').append(' <span class="caret"></span>');
+	});
+	
+	$('#estado li a').on('click', function(){
+		var estad = $(this).text();
+		//alert(estad);
+		$('#estadoOK').text(estad);
+		$('#estadoOK').append(' <span class="caret"></span>');
+	});
+	
+	</script> 
+	
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/bootstrap.js"></script>
+  </body>
+</html>

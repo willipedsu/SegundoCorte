@@ -1,0 +1,47 @@
+<html>
+	<head>
+	
+	<style "text/css">
+		.tarea{border: 1px solid black; margin: 10px; margin-top: 0px}
+	</style>
+	
+	</head>
+	<body>
+	
+	<div style = "float: left" class="tarea">
+	
+	<span><strong>tarea</strong></span> <br>
+	<input id="info"> <br><br>
+	<input id="boton" type="button" value="Crear">
+	</div>
+	
+	<div id="lista">
+		<div>
+		<strong>Lista de Tareas</strong>
+		</div>
+		
+	</div>	
+
+	<script type="text/javascript">
+	
+	document.getElementById("boton").onclick=anade;
+	
+	function anade() {
+
+	var elemento = document.createElement("div");
+	var info2 = document.getElementById("info");
+	var info = document.getElementById("info").value;
+	
+	var texto = document.createTextNode(info);
+	elemento.appendChild(texto);
+ 
+	var lista = document.getElementById("lista");
+	lista.appendChild(elemento);
+	
+	info2.value="";
+
+	}
+	</script>
+	
+	</body>
+</html>
